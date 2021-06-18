@@ -1,0 +1,51 @@
+<app-search> </app-search>
+<div class="container-card">
+    <div class="row">
+        <div *ngFor="let heroes of newHeroes | slice:0:20" class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2  puntero">
+            <div class="my-card mb-5">
+                <div class="my-card-img">
+                    <img class="card-img-top " [src]="heroes.images.md " alt="Card image cap">
+
+                </div>
+                <div class="my-card-info">
+                    <div class="card-body ">
+                        <h5 class="card-title text-primary ">{{ heroes.name }}</h5>
+                        <p class="card-text ">
+                            <p>Intelligence: <b>{{ heroes.powerstats.intelligence }}</b></p>
+                            <p>Speed: <b>{{ heroes.powerstats.speed || "None " }}</b></p>
+                            <p>Power: <b>{{ heroes.powerstats.power || "None " }}</b></p>
+                            <p>Gender: <b>{{ heroes.appearance.gender || "None " }}</b></p>
+                            <p>Race: <b>{{ heroes.appearance.race || "None " }}</b></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- <div class="card-group m-5 animated fadeIn">
+
+    <div class="row">
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2" *ngFor="let heroe of newHeroes | slice:0:20" class="card puntero">
+          <div class="my-card mb-5">
+
+          <img class="card-img-top " [src]="heroe.images.md " alt="Card image cap ">
+            <div class="card-body ">
+                <h5 class="card-title ">{{ heroe.name }}</h5>
+                <p class="card-text ">
+                    <p>Intelligence: <b>{{ heroe.powerstats.intelligence }}</b></p>
+                    <p>Speed: <b>{{ heroe.powerstats.speed || "None " }}</b></p>
+                    <p>Power: <b>{{ heroe.powerstats.power || "None " }}</b></p>
+                    <p>Gender: <b>{{ heroe.appearance.gender || "None " }}</b></p>
+                    <p>Race: <b>{{ heroe.appearance.race || "None " }}</b></p>
+
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+</div> -->
